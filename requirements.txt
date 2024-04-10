@@ -1,0 +1,8 @@
+tokenizers
+torch>=2.0.1
+tqdm>=4.65.0
+transformers
+xformers>=0.0.20
+peft
+diffusers==0.25.1
+gradio==3.43.1
