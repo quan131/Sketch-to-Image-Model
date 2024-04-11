@@ -13,7 +13,7 @@ Running the model:
 
 1. Installation:
 - Clone the code to your computer: 
-    >git clone 
+    >git clone https://github.com/quan131/Sketch-to-Image-Model.git
 - Install the required libraries: 
     >pip install -r requirements.tx
 
