@@ -23,7 +23,7 @@ Running the model:
 
 3. Run the model:
 
-- Run the following command: python main.py
+- Run the following command: python app.py
 - Select your sketch drawing and the desired image style.
 - Click the "Generate Image" button to start the process.
 
