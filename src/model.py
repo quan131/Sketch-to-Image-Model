@@ -1,10 +1,8 @@
 from diffusers import DDPMScheduler
 
-
 def make_1step_sched():
     noise_scheduler_1step = DDPMScheduler.from_pretrained("stabilityai/sd-turbo", subfolder="scheduler")
     noise_scheduler_1step.set_timesteps(1)
-    noise_scheduler_1step.alphas_cumprod = noise_scheduler_1step.alphas_cumprod
     return noise_scheduler_1step
 
 
