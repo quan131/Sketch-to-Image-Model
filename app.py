@@ -79,7 +79,6 @@ def run(image, prompt, prompt_template, style_name, seed, val_r):
     prompt = prompt_template.replace("{prompt}", prompt)
     image = image.convert("RGB")
     image_t = TF.to_tensor(image) > 0.5
-    image_pil = TF.to_pil_image(image_t.to(torch.float32))
     print(f"r_val={val_r}, seed={seed}")
     with torch.no_grad():
         c_t = image_t.unsqueeze(0).float()
@@ -101,12 +100,6 @@ def update_canvas(use_line, use_eraser):
         _color = "#000000"
         brush_size = 4
     return gr.update(brush_radius=brush_size, brush_color=_color, interactive=True)
-
-
-def upload_sketch(file):
-    _img = Image.open(file.name)
-    _img = _img.convert("L")
-    return gr.update(value=_img, source="upload", interactive=True)
 
 
 scripts = """
